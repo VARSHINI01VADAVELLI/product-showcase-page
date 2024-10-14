@@ -311,7 +311,7 @@ ul{
     }
 }
 
-body {
+/*body {
     background-color: azure;
     background-repeat: no-repeat;
     background-size: cover;
@@ -324,6 +324,7 @@ body {
     height: auto;
    background-color:#8a8a8a;
     color: white;
+    max-width: 400px;
   }
   input {
     border-color: rgb(46, 95, 168);
@@ -336,8 +337,7 @@ body {
     color: white;
     text-align: center;
     font-size: larger;
-    margin-bottom: 10px;
-    margin-top: 30px;
+    margin-bottom: 10px 0;
 
     transition:background 1s;
   }
@@ -366,23 +366,87 @@ body {
   fieldset h1{
     color: #000;
     margin-top: 50px;
+    margin-bottom: 20px;
   }
-  @media (max-width: 500px) {
-    fieldset {
-      width: 90%;
+  body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }*/
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Makes the form centered vertically */
+}
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  a {
+    text-decoration: none;
+    color: #007BFF;
+    margin: 10px 0;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    form {
+      max-width: 100%;
       padding: 15px;
     }
 
-    fieldset h1 {
-      font-size: 20px;
+    h1 {
+      font-size: 1.5em;
     }
 
-    fieldset input {
-      padding: 8px;
-    }
-
-    .login {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="submit"] {
+      font-size: 1em;
       padding: 8px;
     }
   }
-

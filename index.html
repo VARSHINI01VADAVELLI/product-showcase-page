@@ -170,7 +170,63 @@
                 </div>
                 </div>
 <!---js for toggle menu-->
-<script>
+
+
+<div class=" form-container">
+    <form id="contactForm">
+
+    <fieldset>
+      <h1
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        Contact US
+      </h1>
+       <br /> 
+       Name:
+       <input type="text" id="name" name="name" required/>
+ 
+       Email:
+       <input type="email" id="email" name="email" required/>
+ 
+       Password:
+       <input type="password" id="password" name="password" required/>
+ 
+       <a href="https://myaccount.google.com/intro/security">Forgot Password?</a><br />
+ 
+       Queries:
+       <input type="text" id="queries" name="queries" required/>
+ 
+       <input type="submit" value="Submit" class="login" />
+    </fieldset>
+    </form>
+</div>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting the traditional way
+      
+      // Get the form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const queries = document.getElementById('queries').value;
+
+      // You can send the data to a server using AJAX, or just display it for now
+      console.log("Name:", name);
+      console.log("Email:", email);
+      console.log("Password:", password);
+      console.log("Queries:", queries);
+
+      // Example: Show an alert (you can replace this with AJAX request)
+      alert("Form Submitted Successfully! Name: " + name + ", Email: " + email);
+      
+      // Optionally, you can clear the form
+      this.reset();
+    });
+  </script>
+  <script>
     var MenuItems = document.getElementById("MenuItems");
     MenuItems.style.maxHeight="0px";
     function menutoggle(){
@@ -185,27 +241,7 @@
     }
 
 </script>
-<center>
-    <fieldset>
-      <h1
-        style="
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-            'Lucida Sans', Arial, sans-serif;
-        "
-      >
-        Contact US
-      </h1>
-       <br />
-     Name: <input type="text" value="" /></br>
-     Email: <input type="text" value="" /></br>
 
-     Password: <input type="password" name="password" value=""></br>
-<a href="https://myaccount.google.com/intro/security" >Forgot Password?</a></br>
-Queries:<input type="text" value="" /></br>
-
-Submit:<input type="login" value="" class="login"></br>
-</fieldset>
-  </center>
 
     </body>
     </html>
