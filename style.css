@@ -255,6 +255,61 @@ ul{
         text-align:center;
     }
     .col-2, .col-3,.col-4{
-        flex-basis: 100%;
+        flex-basis: 50%;
     }
 }
+
+body {
+    background-color: azure;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "DM Serif Display", serif;
+
+  }
+  fieldset {
+    width: auto;
+    height: auto;
+   background-color:#8a8a8a;
+    color: white;
+  }
+  input {
+    border-color: rgb(46, 95, 168);
+    border-style: solid;
+    border-width: 3;
+    padding: 20 90 20 70;
+    margin: 25;
+    border-radius: 45px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: larger;
+    transition:background 1s;
+  }
+  input:hover{
+    background:rgb(46, 95, 168)
+  }
+  
+  a:hover{
+      color:rgb(219, 157, 157);
+
+  }
+  a:visited{
+      color:rgb(73, 200, 231);
+  }
+  a:active{
+      color:seagreen
+  }
+  .login{
+    border-color:green;
+    border-radius:40px; 
+    padding:30 10 30 10;
+  }
+  .login:hover{
+    background: green;
+  }
+  fieldset h1{
+    color: #000;
+    margin-top: 50px;
+  }
+
