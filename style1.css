@@ -1,0 +1,152 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.small-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.title{
+    text-align: center;
+    margin:0 auto 80px ;
+    position: relative;
+    line-height: 60px;
+    color:#555;
+}
+.title::after{
+    content: '';
+    background:#ff523b;
+    width: 80px;
+    height: 5px ;
+    border-radius:5px ;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform:translateX(-50%) ;
+
+}
+.btn{
+    display:inline-block;
+    background:#ff523b;
+    color:#fff;
+    padding:8px 30px;
+    margin:30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background:#563434;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left:25px ;
+    padding-right: 25px;
+    background-color: #555;
+}
+.offer{
+    background: radial-gradient(#fff,#ff6d);
+    margin-top: 80px;
+    padding: 30px,0;
+    flex-wrap: wrap;
+
+}
+.col-2 .offer-img{
+    padding: 50px;
+    align-items: center;
+}
+small{
+    color:#555;
+}
+
+.col-4 {
+    flex-basis: 23%; /* Adjusts for 4 items per row */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    text-align: center;
+}
+
+.col-4 img {
+    width: 100%;
+    height: auto;
+}
+
+.col-4 h4 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.col-4 p {
+    font-size: 20px;
+    color: #f7941d;
+}
+
+.rating i {
+    color: #ff523b;
+}
+
+/* Responsive Layout - Media Queries */
+@media (max-width: 1200px) {
+    .col-4 {
+        /*flex-basis: 31%; /* 3 items per row */
+            flex-basis: 23%; /* Adjusts for 4 items per row */
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #e1e1e1;
+            text-align: center;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .col-4 {
+        flex-basis: 48%; /* 2 items per row */
+    }
+}
+
+@media (max-width: 576px) {
+    .col-4 {
+        flex-basis: 100%; /* 1 item per row on mobile */
+    }
+}
+
+/* Pagination styling */
+.pagination {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.pagination a {
+    color: #333;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}

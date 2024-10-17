@@ -68,6 +68,46 @@ p{
 .btn:hover{
     background:#563434;
 }
+
+
+/* Responsive Layout 
+@media (max-width: 768px) {
+    .col-2 {
+        flex-basis: 100%; /* Stacks text and image vertically 
+        text-align: center; /* Center-aligns the text 
+    }
+    
+    .col-2 img {
+        padding: 20px 0;
+    }
+
+    .col-2 h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
+    .btn {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-2 h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+    .col-2 p {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}*/
+
+
 .header{
     background: radial-gradient(#fff,#ff6d);
 }
@@ -100,7 +140,8 @@ p{
     transition:transform 1s;
 }
 .col-4 img{
-    width:100%;
+    width:auto;
+    display: inline-block;
 }
 .title{
     text-align: center;
@@ -294,14 +335,76 @@ ul{
   }
   
 .carousel-item img {
-    height: 500px; /* Adjust the height of the images */
+    height: fill; /* Adjust the height of the images */
     object-fit:fill; /* Ensure the image covers the entire space */
 
   }
+  /* Base carousel layout */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-height: 90%;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%; /* Assuming 3 slides */
+}
+
+/*.carousel-item {
+    flex: 1 0 100%; /* Full width of each slide 
+}*/
+
+.carousel img {
+    width: auto;
+    height: auto; /* Make the image responsive */
+}
+
+/* Previous/Next controls */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 16px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Responsive layout for different screen sizes */
+@media (max-width: 768px) {
+    /*.carousel-item {
+        flex: 1 0 100%; /* Each item takes full width on tablets 
+    }*/
+
+    .prev, .next {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/*@media (max-width: 576px) {
+    .carousel-item {
+        flex: 1 0 100%; /* Each item takes full width on small mobile devices 
+    }
+
+    .prev, .next {
+        font-size: 12px;
+        padding: 8px;
+    }
+}*/
+
   
 .pagination a:hover:not(.active) {
     background-color: #ddd;}
-/*media  qeury for less than 600 screen size*/
+/*media  qeury for less than 600 screen size
 @media only screen and (max-width:600px){
     .row{
         text-align:center;
@@ -309,22 +412,28 @@ ul{
     .col-2, .col-3,.col-4{
         flex-basis: 50%;
     }
-}
+}*/
 @media (max-width: 768px) {
     .col-4 {
-        width: 50%; /* Show 2 products per row */
+        width: 25%; /* Show 2 products per row */
+    }
+    .col-2, .col-3,.col-4{
+        flex-basis: 50%;
     }
 }
 img {
     max-width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    display: inline-block;
+}
+.row{
+    display: inline-block;
 }
 
-/* For mobile screens */
+/* For mobile screens 
 @media (max-width: 576px) {
     .col-4 {
-        width: 100%; /* Show 1 product per row */
+        width: 100%; /* Show 1 product per row 
     }
 }
 @media (max-width: 768px) {
@@ -334,8 +443,44 @@ img {
     p {
         font-size: 14px;
     }
-}
+}*/
+ /*@media (max-width: 768px) {
+    .col-2, .col-3, .col-4 {
+        flex-basis: 50%; /* Show 2 products per ro
+    
 
+    h4 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}}*/
+    @media (min-width: 600px) {
+        .col-4 {
+            flex-basis: 18%; /* Show more products per row on very large screens */
+        }
+    }
+
+
+   /* @media (max-width: 600px) {
+        .row {
+            text-align: center;
+        }
+        .col-2, .col-3, .col-4 {
+            flex-basis: 50%; /* Override to 2 products per row 
+        }
+    }*/
+    
+/* For mobile screens 576px and below 
+@media (max-width: 576px) {
+    .col-2, .col-3, .col-4 {
+        flex-basis: 100%; /* Show 1 product per row 
+    }
+}*/
+
+/* For very small screens (below 600px) */
 
 /*body {
     background-color: azure;
